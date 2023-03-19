@@ -1,0 +1,10 @@
+/ Cibele > Camila > Celeste
+const idadesArr = [8,9,10]
+const idade = (array) => {
+  const media = Math.floor(array.length / 2),
+    N = [...array].sort((a, b) => a - b)
+  return array.length % 2 !== 0
+    ? N[media]
+    : (N[media - 1] + N[media]) / 2
+}
+console.log(idade(idadesArr))
